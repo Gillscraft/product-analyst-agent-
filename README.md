@@ -1,57 +1,60 @@
 # product-analyst-agent-
 Building a product analyst agent using python + LLMs
 
- title: "Agentic Workflow — Google Sheets Connector"
- title: "Agentic Workflow — Google Sheets Connector"
+title: Agentic Workflow — Google Sheets Connector
 
-  summary: >
-    This repo shows how to connect to Google Sheets using Python.
-    It’s a foundational step toward building a Product Analyst Agent.
-    Copy the files below, plug in your own Google Sheet + credentials, and run locally.
+summary: >
+  This repo shows how to connect to Google Sheets using Python.
+  It’s a foundational step toward building a Product Analyst Agent.
+  You can copy the code, plug in your own Google Sheet, and run it locally.
 
-  files_and_what_they_do:
-    sheets_connector.py: >
-      The main code you run.
-      It authenticates, pulls data from your Google Sheet, and prints a preview.
+files:
+  sheets_connector.py: >
+    The main Python file.
+    This is the file you run.
+    It connects to Google Sheets, pulls data, and prints a preview.
 
-    requirements.txt: >
-      The dependency list.
-      Install these packages once so the Python script can run.
+  requirements.txt: >
+    A short list of Python packages required to run the code.
+    Install these once before running the script.
 
-    .env.example: >
-      A safe template (meant to be copied).
-      Users copy this file to create their own .env and paste their Sheet ID there.
-      This keeps configuration out of the code.
+  .env.example: >
+    A template configuration file.
+    Copy this file, rename it to .env, and paste in your own Google Sheet ID.
+    This keeps configuration out of the code.
 
-    .gitignore: >
-      Safety file.
-      Prevents local/private files (like .env and credentials.json) from being uploaded to GitHub.
+  .gitignore: >
+    Prevents private or local files (like credentials and environment variables)
+    from being uploaded to GitHub.
 
-  what users need to create locally:
-    - file: ".env"
-      how: "Copy .env.example → rename to .env → set GOOGLE_SHEET_ID"
-      example: "GOOGLE_SHEET_ID=your_sheet_id_here"
-    - file: "credentials.json"
-      how: "Add your own Google service account credentials file (never upload this)"
+local_files_you_create:
+  - .env:
+      purpose: Stores your Google Sheet ID locally
+      example: GOOGLE_SHEET_ID=your_sheet_id_here
 
-  setup steps:
-    - description: "Create and activate a clean Python environment"
-      command: "python3 -m venv venv && source venv/bin/activate"
+  - credentials.json:
+      purpose: Your Google service account credentials
+      note: This file should never be uploaded to GitHub
 
-    - description: "Install required packages"
-      command: "pip install -r requirements.txt"
+setup:
+  - Create a virtual environment:
+      command: python3 -m venv venv && source venv/bin/activate
 
-  run:
-    command: "python3 sheets_connector.py"
-    result: >
-      The script authenticates with Google Sheets, fetches your worksheet data,
-      and prints a preview.
+  - Install dependencies:
+      command: pip install -r requirements.txt
 
-  note_on_sheet_id: >
-    Your Sheet ID comes from the URL:
-    https://docs.google.com/spreadsheets/d/[THIS_IS_THE_ID]/edit
+run:
+  command: python3 sheets_connector.py
+  result: >
+    Authenticates with Google Sheets,
+    fetches the data,
+    and prints a preview.
 
-  next_steps:
-    - Add analysis and charts
-    - Add insight summaries
-    - Build toward an agentic workflow
+sheet id note: >
+  Your Sheet ID comes from the Google Sheets URL:
+  https://docs.google.com/spreadsheets/d/[THIS_IS_THE_ID]/edit
+
+nex steps:
+  - Add analysis and charts
+  - Add insight summaries
+  - Build toward an agentic workflow
