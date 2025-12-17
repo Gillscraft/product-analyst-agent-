@@ -23,18 +23,11 @@ files:
     Copy this file, rename it to .env, and paste in your own Google Sheet ID.
     This keeps configuration out of the code.
 
-  .gitignore: >
-    Prevents private or local files (like credentials and environment variables)
-    from being uploaded to GitHub.
 
 local_files_you_create:
   - .env:
       purpose: Stores your Google Sheet ID locally
       example: GOOGLE_SHEET_ID=your_sheet_id_here
-
-  - credentials.json:
-      purpose: Your Google service account credentials
-      note: This file should never be uploaded to GitHub
 
 setup:
   - Create a virtual environment:
