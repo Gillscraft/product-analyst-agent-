@@ -27,14 +27,14 @@ Building a product analyst agent using python + LLMs
       Safety file.
       Prevents local/private files (like .env and credentials.json) from being uploaded to GitHub.
 
-  what_users_need_to_create_locally:
+  what users need to create locally:
     - file: ".env"
       how: "Copy .env.example → rename to .env → set GOOGLE_SHEET_ID"
       example: "GOOGLE_SHEET_ID=your_sheet_id_here"
     - file: "credentials.json"
       how: "Add your own Google service account credentials file (never upload this)"
 
-  setup_steps:
+  setup steps:
     - description: "Create and activate a clean Python environment"
       command: "python3 -m venv venv && source venv/bin/activate"
 
