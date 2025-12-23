@@ -1,7 +1,7 @@
 # product-analyst-agent-
 Building a product analyst agent using python + LLMs
 
-title: Agentic Workflow — Google Sheets Connector
+title: Agentic Workflow — Google Sheets, OpenAI and Python Charts connector
 
 summary: >
   This repo shows how to connect all the tools (Google sheets,openAI, Python Charts) are getting called 
