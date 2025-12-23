@@ -1,6 +1,19 @@
+# Virtual environments
 venv/
+.env/
+.venv/
+env/
+
+# Environment variables
 .env
+
+# Credentials / secrets
 credentials.json
+*.json
+
+# Python cache
 __pycache__/
 *.pyc
+
+# OS / editor files
 .DS_Store
